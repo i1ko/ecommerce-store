@@ -8,6 +8,7 @@ import getSizes from "@/actions/get-sizes";
 import getColors from "@/actions/get-colors";
 import getCategory from "@/actions/get-category";
 import ProductCard from "@/components/ui/product-card";
+import MobileFilter from "@/app/(routes)/category/[categoryId]/components/mobile-filter";
 
 interface CategoryPageProps {
   params: {
@@ -40,13 +41,16 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({params, searchParams})
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
           {/*  Add mobile filter */}
+            { !!(colors && sizes)
+              && <MobileFilter colors={colors} sizes={sizes}/>
+            }
             <div className="hidden lg:block">
-              {sizes && <Filter
+              {!!sizes && <Filter
                 valueKey="sizeId"
                 name="Sizes"
                 data={sizes}
               />}
-              {colors && <Filter
+              {!!colors && <Filter
                 valueKey="colorId"
                 name="Colors"
                 data={colors}
