@@ -7,6 +7,7 @@ interface IconButtonProps {
   className?: string;
 }
 const IconButton: React.FC<IconButtonProps> = ({onClick, icon, className}) => {
+
   return (
     <button
       onClick={onClick}
