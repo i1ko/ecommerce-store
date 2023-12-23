@@ -1,6 +1,8 @@
 "use client";
+
 import {useEffect, useState} from "react";
 
+// todo: add new currencies
 export const formatter = new Intl.NumberFormat("en-US", {
   style: 'currency',
   currency: 'USD'
