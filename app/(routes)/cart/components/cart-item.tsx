@@ -1,11 +1,11 @@
 "use client";
 
 import Image from 'next/image';
-import {X} from "lucide-react";
-import IconButton from "@/components/ui/icon-button";
-import {Product} from "@/types";
-import Currency from "@/components/ui/currency";
+import {TrashIcon} from "lucide-react";
 import useCart from "@/hooks/use-cart";
+import IconButton from "@/components/ui/icon-button";
+import Currency from "@/components/ui/currency";
+import {Product} from "@/types";
 
 interface CartItemProps {
   data: Product;
@@ -30,8 +30,8 @@ const CartItem: React.FC<CartItemProps> = ({
         />
       </div>
       <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
-        <div className="absolute z-10 right-10 top-10">
-          <IconButton onClick={onRemove} icon={<X size={15} />} />
+        <div className="absolute zs-10 right-10 top-10">
+          <IconButton className="hover:bg-[#F56565] hover:text-white" onClick={onRemove} icon={<TrashIcon size={15} />} />
         </div>
         <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
           <div className="flex justify-between">
