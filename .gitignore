@@ -149,3 +149,6 @@ fabric.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm+all,visualstudiocode
 ### gitignore.io ends
+
+# images of our products that are using
+/products_images
